@@ -95,5 +95,5 @@ def index():
 
 if __name__ == "__main__":
     bot.remove_webhook()
-    bot.set_webhook(url=f"https://YOUR_RENDER_URL/{TOKEN}")
+    bot.set_webhook(url=f"https://wifuchaet.onrender.com/{TOKEN}")
     app.run(host="0.0.0.0", port=10000)
