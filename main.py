@@ -42,10 +42,10 @@ def search_trace_moe(image_bytes):
         if result["result"]:
             r = result["result"][0]
             return {
-                "anime": r.get("anime"),
-                "character": r.get("filename", "Unknown"),
-                "episode": f"Ep {r.get('episode')}",
-                "timestamp": f"{int(r['from']//60)}:{int(r['from']%60):02}"
+    "anime": r.get("anime", "Unknown"),
+    "character": r.get("character") or r.get("filename", "Unknown"),
+    "episode": f"Ep {r.get('episode', '?')}",
+    "timestamp": f"{int(r['from']//60)}:{int(r['from']%60):02}"
             }
     return None
 
