@@ -4,8 +4,10 @@ import json
 import requests
 from flask import Flask, request
 import telebot
+from dotenv import load_dotenv
 
-TOKEN = "YOUR_BOT_TOKEN"
+load_dotenv()
+TOKEN = os.getenv("BOT_TOKEN")
 bot = telebot.TeleBot(TOKEN)
 app = Flask(__name__)
 
